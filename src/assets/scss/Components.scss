@@ -1,0 +1,77 @@
+@import 'App';
+
+
+.vedio_wrapper{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+    background-color: #0000005b;
+    margin-bottom: 10px;
+
+    video{
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        min-width: 100%;
+        max-width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    button{
+        position: absolute;
+        z-index: 300;
+        border-radius: 30%;
+        background-color: #000000a8;
+        color: $background;
+        cursor: pointer;
+        border: 1px solid #d5d5d5d2;
+        width: 70px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        top: 60%;
+        left: 0px;
+        transition: 0.3s linear;
+
+        svg{
+            font-size: 18px;
+        }
+    }
+
+    h4{
+        position: absolute;
+        z-index: 300;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        bottom: 0%;
+        font-family: $popins;
+        color: $background;
+        font-size: 0.80rem;
+        font-weight: 500;
+    }
+}
+
+.Vedio_duration{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0px;
+    background-color: #000;
+    z-index: 300;
+    color: $background;
+    margin: 10px;
+    left: 0px;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+}
