@@ -105,5 +105,13 @@
 
 .Allblog_content{
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.PopularPage h3{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: $usa_font;
 }
 

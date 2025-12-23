@@ -2,6 +2,7 @@ import { useEffect} from "react";
 import { Link } from "react-router-dom";
 import '../assets/scss/Navigation.scss';
 import Icon from "./Icon";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
     return (
@@ -17,17 +18,17 @@ export default function NavBar() {
                         <span className='drops' id='company'>Explore <Icon name="BsChevronDown" />
                         <div className='drop_box'>
                             <div id="top_data">
-                                <Link to=""><Icon name="MdTrendingUp" /> Popular</Link>
-                                <Link to=""><Icon name="GiWrappingStar" /> Business and Analytics</Link>
+                                <Link to="/posts/popular/"><Icon name="MdTrendingUp" /> Popular</Link>
+                                <Link to="/posts/business/"><Icon name="GiWrappingStar" /> Business and Analytics</Link>
                             </div>
-                            <Link to="">News</Link>
-                            <Link to="">Sports</Link>
-                            <Link to="">Biographies</Link>
-                            <Link to="">Politics</Link>
-                            <Link to="">Entertainments</Link>
-                            <Link to="">Tech</Link>
-                            <Link to="">Finance</Link>
-                            <Link to="">International News</Link>
+                            <Link to="/posts/news/">News</Link>
+                            <Link to="/posts/sports/">Sports</Link>
+                            <Link to="/posts/biographies/">Biographies</Link>
+                            <Link to="/posts/politics/">Politics</Link>
+                            <Link to="/posts/Entertainments/">Entertainments</Link>
+                            <Link to="/posts/technology/">Tech</Link>
+                            <Link to="/posts/Finance/">Finance</Link>
+                            <Link to="/posts/news/international/">International News</Link>
                         </div>
                         </span>
                         <Link to="">Channels</Link>

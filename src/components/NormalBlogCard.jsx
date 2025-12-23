@@ -10,7 +10,7 @@ export default function NormalBlogCard({post}) {
 
     return (
         <Link to="" className="Normalpost_box">
-            <div className="postbox_img">
+            <div className="postbox_img" style={{backgroundColor: "black"}}>
                 {post.file_type === "Video" ? (
                     <VideoPlayer src={`${MEDIA_URL}/${post.file_url}`} />
                 ): (

@@ -3,6 +3,9 @@ import NormalBlogCard from "./NormalBlogCard";
 import '../assets/scss/Bloglist.scss'
 
 export default function BlogListPatterns({ blogs }) {
+    if (!blogs || blogs.length === 0) {
+            return <p>No blogs available.</p>;
+        }
     return(
         <div className="bloglist_pattern">
             {blogs.map((blog, index) => {

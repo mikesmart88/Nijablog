@@ -13,18 +13,18 @@ import StraightBlogList from "../components/SBlogList";
 import BlogListPatterns from "../components/BlogPattern";
 import { BACKEND_URL } from "../../env.config";
 
-export default function HomePage() {
-    const { heropost, blogList, video, Allpost, News, filteredPosts } = UsePost();
+
+export default function PopularPostPage(){
+    const { Displayedpost } = UsePost();
     const [pageUrl, setpageUrl] = useState(window.location.href)
 
     const metadata = UseMeta(
-        "HomePage | NijaBloog",
+        "Popular Posts | NijaBloog",
         "Explore new feeds and many more on nijablog by react",
         `${pageUrl}`,
         'NijaBlog'
     )
-
-    return (
+    return(
         <>
         <Helmet>
             <title>{metadata.title}</title>
@@ -38,42 +38,12 @@ export default function HomePage() {
             )
             )}
         </Helmet>
-
-        <main id="Homepage">
-            <section className="latest_section">
-                <section id="latest_blogs">
-                    <h3>Latest Blogs</h3>
-                    <SinglePost blog={heropost} />
-                    <PostBox bloglist={blogList} />
-                </section>
-                <section id="latest_news">
-                    <h3>News</h3>
-                    <NewsCard blogList={News} />
-                    <div className="feau_video">
-                        <h3>Featured Video</h3>
-                        {video.map((vid) => (
-                            <VedioBox videoPost={vid} key={vid.id} />
-                        ))}
-                    </div>
-                </section>
-            </section>
-
-            <section id="category_blog">
-                <span>
-                    Explore By Categories
-                </span>
-                <section className="scroll_blogs">
-                    <StraightBlogList blogList={filteredPosts} />
-                    <StraightBlogList blogList={filteredPosts} aria-hidden />
-                </section>
-            </section>
-
+        <main id="Homepage" className="PopularPage">
+            <h3>Popular Posts</h3>
             <section id="Allblog_content">
-                <BlogListPatterns blogs={Allpost} />
+                <BlogListPatterns blogs={Displayedpost} />
             </section>
-
         </main>
-
         </>
     )
 }

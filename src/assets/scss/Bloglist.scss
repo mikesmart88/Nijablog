@@ -491,7 +491,7 @@
 }
 
 .Normalpost_box{
-    width: calc(1091px / 4 - 20px);
+    width: calc(1091px / 4 - 10px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -502,6 +502,7 @@
     text-decoration: none;
     border-radius: 15px;
     border: 1px solid #00000017;
+    background-color: $background;
 
     small, span{
         font-size: 12px;
